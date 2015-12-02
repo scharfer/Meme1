@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="meme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e4x-Eh-z5R">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckV-6H-zOD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Camera" width="149" id="kuW-zu-iAE"/>
+                                    <barButtonItem title="Album" width="60" id="2UY-9b-Eoa">
+                                        <connections>
+                                            <action selector="showImagePicker:" destination="BYZ-38-t0r" id="HmW-cu-YYF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e4x-Eh-z5R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Dn-nG-2Aw"/>
+                            <constraint firstItem="e4x-Eh-z5R" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Pjc-G8-XnY"/>
+                            <constraint firstItem="e4x-Eh-z5R" firstAttribute="trailing" secondItem="ckV-6H-zOD" secondAttribute="trailing" id="TPh-TV-ujB"/>
+                            <constraint firstItem="ckV-6H-zOD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="b0y-sa-bL2"/>
+                            <constraint firstItem="e4x-Eh-z5R" firstAttribute="leading" secondItem="ckV-6H-zOD" secondAttribute="leading" id="bfx-k0-T1C"/>
+                            <constraint firstItem="ckV-6H-zOD" firstAttribute="top" secondItem="e4x-Eh-z5R" secondAttribute="bottom" id="mDU-SF-YYn"/>
+                            <constraint firstAttribute="trailing" secondItem="ckV-6H-zOD" secondAttribute="trailing" id="yxi-dl-h6e"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="e4x-Eh-z5R"/>
+                                <exclude reference="ckV-6H-zOD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1Dn-nG-2Aw"/>
+                                <exclude reference="Pjc-G8-XnY"/>
+                                <exclude reference="TPh-TV-ujB"/>
+                                <exclude reference="bfx-k0-T1C"/>
+                                <exclude reference="b0y-sa-bL2"/>
+                                <exclude reference="mDU-SF-YYn"/>
+                                <exclude reference="yxi-dl-h6e"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="e4x-Eh-z5R"/>
+                                <include reference="ckV-6H-zOD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1Dn-nG-2Aw"/>
+                                <include reference="Pjc-G8-XnY"/>
+                                <include reference="TPh-TV-ujB"/>
+                                <include reference="bfx-k0-T1C"/>
+                                <include reference="b0y-sa-bL2"/>
+                                <include reference="mDU-SF-YYn"/>
+                                <include reference="yxi-dl-h6e"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mainImage" destination="e4x-Eh-z5R" id="lAg-VH-T0v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="359"/>
+        </scene>
+    </scenes>
+</document>
